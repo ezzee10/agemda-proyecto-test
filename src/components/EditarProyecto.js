@@ -59,7 +59,7 @@ const EditarProyecto = () => {
     }
 
 
-    const onSubmitContacto = e => {
+    const onSubmitProyecto = e => {
         e.preventDefault();
 
 
@@ -110,7 +110,7 @@ const EditarProyecto = () => {
                 titulo = {"Edit Project"}
             />
 
-            <form className="container formulario" onSubmit={onSubmitContacto}>
+            <form className="container formulario" onSubmit={onSubmitProyecto}>
                 <div className="form-group">
                     <label htmlFor="exampleFormControlInput1">Project name</label>
                     <input

@@ -54,7 +54,7 @@ const NuevoProyecto = () => {
 
     // Cuando el usuario agrega un nuevo proyecto
 
-    const onSubmitContacto = e => {
+    const onSubmitProyecto = e => {
         e.preventDefault();
 
         //validación
@@ -102,7 +102,7 @@ const NuevoProyecto = () => {
                 titulo={"Add Project"}
             />
 
-            <form className="container formulario" onSubmit={onSubmitContacto}>
+            <form className="container formulario" onSubmit={onSubmitProyecto}>
                 <div className="form-group">
                     <label htmlFor="exampleFormControlInput1">Project name</label>
                     <input
