@@ -1,24 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+
+import AgendaState from './context/agenda/agendaState';
+import Agenda from './components/Agenda';
+import EditarProyecto from './components/EditarProyecto';
+import AlertaState from './context/alertas/alertaState';
+import NuevoProyecto from './components/NuevoProyecto';
+
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <AgendaState>
+      <AlertaState>
+      <BrowserRouter>
+        <Switch>
+          <Route path='/' exact component={Agenda}/>
+          <Route path='/nuevo-proyecto' exact component={NuevoProyecto}/>
+          <Route path='/editar-proyecto' exact component={EditarProyecto}/>
+        </Switch>
+      </BrowserRouter>
+      </AlertaState>
+    </AgendaState>
   );
 }
 
